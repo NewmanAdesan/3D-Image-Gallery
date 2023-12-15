@@ -14,7 +14,7 @@ img {
     user-select: none;
 }
 
-body {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
