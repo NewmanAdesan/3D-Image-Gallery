@@ -42,7 +42,7 @@ body {
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
 }
 
@@ -89,4 +89,12 @@ body {
 
 .btns .btn.prev::before {
     transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+
+@media screen and (max-width: 600px) {
+
+    .box span {
+        backface-visibility: hidden;
+    }
+    
 }
