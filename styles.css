@@ -6,8 +6,10 @@
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 45vh;
+    height: 45vh;
+    max-width: 200px;
+    max-height: 200px;
     object-fit: cover;
     user-select: none;
 }
@@ -19,6 +21,7 @@ body {
     min-height: 100vh;
     background: #000;
     transform-style: preserve-3d;
+    overflow-x: hidden;
 }
 
 .box {
@@ -27,7 +30,7 @@ body {
     height: 200px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
-    transition: 1.5s;
+    transition: 1s;
 }
 
 .box span {
@@ -39,12 +42,15 @@ body {
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+    backface-visibility: hidden;
     -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
 }
 
 .btns {
     position: absolute;
-    bottom: 100px;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 30px;
 }
